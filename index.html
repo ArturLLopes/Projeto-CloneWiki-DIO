@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Meta tags para configuração do documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Wikipedia Clone - BEM</title>
+
+    <!-- Links para folhas de estilo -->
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/variable.css">
+
+    <!-- Ícone da página -->
+    <link rel="shortcut icon" href="./src/assets/favicon/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Cabeçalho da página -->
+    <header id="header" class="header">
+        <!-- Logo do site -->
+        <figure class="header__logo">
+            <img src="./src/assets/img/logo.png" alt="Logo Wikipedia">
+        </figure>
+        <!-- Campo de busca -->
+        <div class="header__search">
+            <input type="text" placeholder="Pesquise no texto" id="busca">
+        </div>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <section class="main__content">
+        <!-- Menu de navegação à esquerda -->
+        <nav class="side__menu__left" aria-label="Menu de navegação principal">
+            <ul>
+                <p>Links Externos</p>
+                <li><a href="https://pt.wikipedia.org/wiki/Wikipédia:Página_principal" target="_blank">Página
+                        principal</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank">Cascading Style
+                        Sheets</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/CSS" target="_blank">CSS</a></li>
+            </ul>
+        </nav>
+
+        <!-- Conteúdo principal -->
+        <main>
+            <section class="main__content__text">
+                <!-- Artigo sobre BEM -->
+                <article class="article" id="descricao">
+                    <h1 id="inicio">BEM: guia definitivo do padrão CSS mais famoso</h1>
+                    <p>BEM é uma metodologia CSS (ou convenção de nomenclatura) usada no mundo todo. Continue lendo para
+                        saber o que é CSS BEM, vantagens em se usar, melhores práticas com BEM, exemplos de escrita e
+                        muito mais.
+                    </p>
+
+                    <!-- Vídeo incorporado do YouTube -->
+                    <iframe id="video" width="430" height="305"
+                        src="https://www.youtube.com/embed/rltjnLyjFZk?si=SZSwcWO8kRM6RGyH" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <!-- Seção sobre o que é BEM -->
+                    <h2 id="bem">O que é BEM?</h2>
+                    <p>BEM é uma metodologia de nomenclatura de classes CSS. O acrônimo BEM significa <u>Block, Element,
+                            Modifier </u> . A ideia por trás do BEM é dividir o código em blocos independentes,
+                        elementos e
+                        modificadores. Isso torna o código mais reutilizável e legível.
+                    </p>
+                    <!-- Imagem ilustrativa do BEM -->
+                    <figure>
+                        <img class="main__content__img-multiply" src="./src/assets/img/bemCss-logo.png"
+                            data-src="./src/assets/img/bemCss-logo.png" alt="Logotipo ilustrativo do padrão BEM"
+                            id="image">
+                    </figure>
+                    <!-- Modal para ampliar a imagem -->
+                    <div class="modal" id="modal" role="dialog" aria-labelledby="close">
+                        <button id="close" aria-label="Fechar modal">&times;</button>
+                        <img id="modal-img" alt="Imagem ampliada do logotipo BEM">
+                    </div>
+
+                    <!-- Seção sobre o nome BEM -->
+                    <h2>Seu nome é BEM.</h2>
+                    <p>
+                        E aí vem o primeiro segredinho: BEM, na verdade, é um acrônimo para <u>Bloco, Elemento e
+                            Modificador</u>. Esses são os 3 pilares do padrão BEM, tendo cada um seu significado, sua
+                        função e
+                        regras próprias de escrita.
+
+                        Segundo Varya Stepanova, uma das desenvolvedoras front-end que já fez parte do time BEM da
+                        própria Yandex,
+                    </p>
+                    <!-- Citação -->
+                    <blockquote>
+                        “BEM faz alusão a Programação Orientada a Objetos (POO), uma maneira de descrever a realidade no
+                        código, com uma variedade de padrões e uma maneira de pensar nas entidades do programa.”
+                    </blockquote>
+                    <p>
+                        E, realmente, é possível perceber esta alusão a POO no uso de BEM para nomear “entidades” no
+                        CSS. Com a prática e tempo de uso esse princípio vai ficando mais evidente.
+                    </p>
+
+                    <!-- Seção sobre as regras de BEM -->
+                    <h2 id="regras">Regras de Bloco, Elemento e Modificador</h2>
+                    <p>
+                        Como citado, cada uma das letrinhas do acrônimo BEM tem sua função específica dentro da
+                        metodologia, ora sendo usada em separado, ora em coordenação com as demais.
+
+                        E são justamente essas regras de escrita e respectivas funções de Bloco, Elemento e Modificador
+                        que serão explicadas agora.
+                    </p>
+
+                    <!-- Subseção sobre Bloco -->
+                    <h3>Bloco</h3>
+                    <p>
+                        Em BEM, um Bloco é uma entidade independente, um “bloco de construção” de uma aplicação; uma
+                        abstração mais geral, com seu próprio significado.
+
+                        Se você está acostumado com outras convenções/metodologias (como SMACSS), para facilitar, pode
+                        considerar um Bloco como um Componente ou Módulo.
+
+                        Bloco é a parte da trinca com mais flexibilidade na nomenclatura, significando que você pode
+                        atribuir o nome à “entidade” da maneira que quiser — inclusive em conjunto com outras
+                        convenções, como Namespaces CSS.
+                    </p>
+
+                    <!-- Subseção sobre Elemento -->
+                    <h3>Elemento</h3>
+                    <p>
+                        Elemento é uma parte de um Bloco que não pode ser usada separadamente dele. Ou seja, um Elemento
+                        é um filho de um Bloco.
+
+                        Elementos são representados por dois underscores (__) no nome da classe, que fica assim:
+                        .bloco__elemento.<br>
+
+                        Um exemplo prático de Bloco e Elemento seria um menu de navegação, onde o Bloco seria o menu
+                        inteiro e os Elementos seriam os itens do menu.
+                    </p>
+
+                    <!-- Subseção sobre Modificador -->
+                    <h3>Modificador</h3>
+                    <p>
+                        Como sugere o próprio nome, um Modificador de BEM serve para… Modificar. Mas modificar o quê?
+                        Pode ser um Bloco ou um Elemento.<br>
+
+                        Isso mesmo: um Modificador pode ser aplicado tanto em um Bloco, quanto em um Elemento, servindo
+                        como uma variante usada para alterar sua aparência, variar uma propriedade ou atribuir um
+                        estado.<br>
+
+                        Sua regra de escrita é uma classe composta pelo nome de um Bloco ou Modificador + 2 hífens + o
+                        nome do Modificador: [Bloco|Elemento]--[Modificador].
+                        <br>
+
+                        Seguindo o exemplo, poderia haver um modificador para o menu .c-menu--dark para um versão
+                        escura; uma versão do menu fixa com .c-menu--fixed ou; para links desabilitados,
+                        .c-menu__link--disabled.
+                    </p>
+
+                    <!-- Seção com exemplo prático de BEM -->
+                    <h2 id="exemplo">Exemplo prático de BEM</h2>
+                    <figure class="img_example">
+                        <img src="./src/assets/img/exemplo-1.png" data-src="./src/assets/img/exemplo-1.png"
+                            alt="Exemplo prático de BEM" id="image">
+                    </figure>
+
+                    <p>
+                        No exemplo acima, temos um Bloco .menu, com os Elementos .menu__item e .menu__link. O
+                        Modificador
+                        .menu__link--disabled é aplicado ao Elemento .menu__link, desabilitando o link.
+                    </p>
+
+                    <!-- Conclusão do artigo -->
+                    <h2 id="conclusao">Conclusão</h2>
+                    <p>
+                        BEM é uma metodologia de nomenclatura de classes CSS que divide o código em blocos
+                        independentes,
+                        elementos e modificadores. Isso torna o código mais reutilizável e legível. BEM é amplamente
+                        utilizado no mundo todo e é uma ótima maneira de organizar seu código CSS.
+                    </p>
+                </article>
+            </section>
+        </main>
+
+        <!-- Menu de navegação à direita -->
+        <nav class="side__menu__right" aria-label="Menu de navegação secundário">
+            <ul>
+                <p>Índice</p>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#bem">BEM</a></li>
+                <li><a href="#regras">Regras</a></li>
+                <li><a href="#exemplo">Exemplo</a></li>
+                <li><a href="#conclusao">Conclusão</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Rodapé da página -->
+    <footer class="footer">
+        <img src="./src/assets/img/logo_footer/logo.png" alt="Logo do rodapé">
+        <p>Desenvolvido por <a href="https://www.linkedin.com/in/artur-lages-lopes/" target="_blank">Artur Lages Lopes
+            </a>, todos os direitos reservados.<br>
+            Conecte-se comigo!
+        </p>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+    <script src="./src/js/script.js"></script>
+    <script src="./src/js/ampliar.js"></script>
+</body>
+
+</html>

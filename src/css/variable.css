@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tillana:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --cor-primaria: #578E7E;
+    --cor-secundaria: #3D3D3D;
+    --fundo-claro: #FFFAEC;
+    --box-claro: #F5ECD5;
+    
+  
+    --fonte-principal: 'Poppins', sans-serif;
+    --fonte-secundaria: 'Tillana', sans-serif;
+  }
+
+  
